@@ -28,8 +28,8 @@ METHODS
     'Server_port', the host where the App::EvalServer instance is running.
     Default is 14400.
 
-    'Channels', an array reference of channels to post messages to. You must
-    specify at least one channel.
+    'Channels', an array reference of channel names. If you don't provide
+    this, the plugin will be active in all channels.
 
     'Method', how you want messages to be delivered. Valid options are
     'notice' (the default) and 'privmsg'.
