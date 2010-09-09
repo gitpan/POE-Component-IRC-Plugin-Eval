@@ -30,5 +30,5 @@ resources:
   homepage: http://search.cpan.org/dist/POE-Component-IRC-Plugin-Eval/
   license: http://dev.perl.org/licenses/
   repository: git://github.com/hinrik/poe-component-irc-plugin-eval.git
-version: 0.03
+version: 0.04
 x_authority: cpan:HINRIK
