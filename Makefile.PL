@@ -29,7 +29,7 @@ my %WriteMakefileArgs = (
     'POE::Wheel::ReadWrite' => '0',
     'POE::Wheel::SocketFactory' => '0'
   },
-  'VERSION' => '0.02',
+  'VERSION' => '0.03',
   'test' => {
     'TESTS' => 't/*.t'
   }
