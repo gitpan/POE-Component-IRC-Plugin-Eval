@@ -3,7 +3,7 @@ BEGIN {
   $POE::Component::IRC::Plugin::Eval::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $POE::Component::IRC::Plugin::Eval::VERSION = '0.04';
+  $POE::Component::IRC::Plugin::Eval::VERSION = '0.05';
 }
 
 use strict;
@@ -222,7 +222,7 @@ POE::Component::IRC::Plugin::Eval - Evaluate code with App::EvalServer
 To quickly get an IRC bot with this plugin up and running, you can use
 L<App::Pocoirc|App::Pocoirc>:
 
- $ pocoirc -s irc.perl.org -j '#bots' -p BotCommand -p Eval
+ $ pocoirc -s irc.perl.org -j '#bots' -a BotCommand -a Eval
 
 Or use it in your code:
 
