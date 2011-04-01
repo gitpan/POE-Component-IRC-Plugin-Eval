@@ -3,7 +3,7 @@ BEGIN {
   $POE::Component::IRC::Plugin::Eval::AUTHORITY = 'cpan:HINRIK';
 }
 BEGIN {
-  $POE::Component::IRC::Plugin::Eval::VERSION = '0.05';
+  $POE::Component::IRC::Plugin::Eval::VERSION = '0.06';
 }
 
 use strict;
@@ -109,7 +109,7 @@ sub connect_failed {
 
     my $eval = delete $self->{evals}{$id};
     my $msg = "Error: Couldn't connect to eval server: $reason";
-    my $color = 'Error: '.BROWN."Couldn't connect to eval server: $reason".NORMAL;
+    my $color = BROWN.'Error:'.NORMAL." Couldn't connect to eval server: $reason";
     $irc->yield($self->{Method}, $eval->{chan}, ($self->{Color} ? $color : $msg));
     return;
 }
@@ -147,7 +147,7 @@ sub eval_error {
     }
 
     my $msg = "Failed to read from evalserver socket: $reason";
-    my $color = 'Error: '.BROWN."Failed to read from evalserver socket: $reason".NORMAL;
+    my $color = BROWN.'Error:'.NORMAL." Failed to read from evalserver socket: $reason";
     $irc->yield($self->{Method}, $eval->{chan}, ($self->{Color} ? $color : $msg));
 
     return;
@@ -167,7 +167,7 @@ sub eval_read {
 
     if ($return->{error}) {
         my $msg = "Error: Failed to eval code: $return->{error}";
-        my $color = 'Error: '.BROWN."Failed to eval code: $return->{error}".NORMAL;
+        my $color = BROWN.'Error:'.NORMAL." Failed to eval code: $return->{error}";
         $irc->yield($self->{Method}, $eval->{chan}, ($self->{Color} ? $color : $msg));
     }
     else {
