@@ -58,7 +58,7 @@
          "web" : "http://github.com/hinrik/poe-component-irc-plugin-eval"
       }
    },
-   "version" : "0.06",
+   "version" : "0.07",
    "x_authority" : "cpan:HINRIK"
 }
 
